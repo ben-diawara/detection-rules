@@ -1,0 +1,21 @@
+name: Build, Test, and Deploy
+
+on:
+  workflow_dispatch:
+
+  
+  schedule:
+    - cron: "0 8 * * 1"
+
+jobs:
+#add jobs
+  bash-script:
+    runs-on: mac
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run Bash script
+        run: bash bash.sh
+
