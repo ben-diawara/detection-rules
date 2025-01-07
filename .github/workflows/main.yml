@@ -29,7 +29,8 @@ jobs:
 
     - name: Install Dependencies
       run: |
-        make
+        pip install .[dev]
+        pip install lib/kql lib/kibana
 
     - name: Export Rules from Elastic Security and Import Rules to TOML
       run: |
