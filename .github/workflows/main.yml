@@ -43,6 +43,7 @@ jobs:
 
     - name: Update Version Lock
       run: |
+        pwd
         python -m detection_rules dev update-lock-versions --force
 
     - name: Create Pull Request
