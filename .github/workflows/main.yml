@@ -36,7 +36,7 @@ jobs:
 
     - name: Setup custom dir for DAC Tool
       run: |
-        python -m detection_rules custom-rules setup-config ${{ env.CUSTOM_RULES_DIR }}
+        python -m detection_rules -h
       env:
         DR_CLOUD_ID: ${{ secrets.ELASTIC_CLOUD_ID }}
         DR_KIBANA_USER: ${{ secrets.ELASTIC_USERNAME }}
