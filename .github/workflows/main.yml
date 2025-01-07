@@ -32,6 +32,7 @@ jobs:
         python -m pip install --upgrade pip
         pip cache purge
         pip install .[dev]
+        make
 
     - name: Export Rules from Elastic Security and Import Rules to TOML
       run: |
@@ -43,7 +44,6 @@ jobs:
 
     - name: Update Version Lock
       run: |
-        pwd
         python -m detection_rules dev update-lock-versions --force
 
     - name: Create Pull Request
