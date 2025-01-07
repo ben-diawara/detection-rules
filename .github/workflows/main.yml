@@ -32,7 +32,7 @@ jobs:
         python -m pip install --upgrade pip
         pip cache purge
         pip install .[dev]
-        make
+        pip install lib/kql lib/kibana
 
     - name: Export Rules from Elastic Security and Import Rules to TOML
       run: |
