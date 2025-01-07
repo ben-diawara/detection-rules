@@ -30,9 +30,7 @@ jobs:
     - name: Install Dependencies
       run: |
         python -m pip install --upgrade pip
-        pip cache purge
-        pip install .[dev]
-        pip install lib/kql lib/kibana
+        make
 
     - name: Export Rules from Elastic Security and Import Rules to TOML
       run: |
