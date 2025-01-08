@@ -65,7 +65,7 @@ jobs:
       if: ${{ github.event.inputs.pr_sync_rules_from_elastic == 'true' }}
       uses: peter-evans/create-pull-request@v6
       with:
-        token: ${{ secrets.WRITE_GITHUB_TOKEN }}
+        token: ${{ secrets.GITHUB_TOKEN }}
         commit-message: "Sync rules from Elastic Security"
         title: "Sync rules from Elastic Security"
         body: "This PR syncs rules from Elastic Security to the repository for review."
