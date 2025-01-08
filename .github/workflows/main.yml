@@ -46,7 +46,7 @@ jobs:
         DR_CLOUD_ID: ${{ secrets.ELASTIC_CLOUD_ID }}
         DR_KIBANA_USER: ${{ secrets.ELASTIC_USERNAME }}
         DR_KIBANA_PASSWORD: ${{ secrets.ELASTIC_PASSWORD }}
-        CUSTOM_RULES_DIR: "custom_rules"
+        CUSTOM_RULES_DIR: "/home/runner/work/detection-rules/detection-rules/custom_rules"
 
     - name: Export Rules from Elastic Security and Import Rules to TOML
       run: |
