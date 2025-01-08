@@ -29,8 +29,6 @@ on:
 jobs:
   sync-to-production:
     runs-on: ubuntu-latest
-    env:
-      CUSTOM_RULES_DIR: /home/runner/work/detection-rules/detection-rules/custom_rules
 
     steps:
     - name: Checkout Repository
@@ -68,6 +66,8 @@ jobs:
           SPACE="dev"
         fi
         SPACE_FLAG="--space $SPACE"
+        echo $SPACE_FLAG
+        echo $FLAGS
         python -m detection_rules kibana $SPACE_FLAG import-rules $FLAGS
       env:
         DR_CLOUD_ID: ${{ secrets.ELASTIC_CLOUD_ID }}
