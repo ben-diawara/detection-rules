@@ -41,7 +41,7 @@ jobs:
 
     - name: Setup custom rules directry and configuration files 
       run: |
-        python -m detection_rules custom-rules setup-config /home/runner/work/detection-rules/detection-rules/custom_rules
+        python -m detection_rules custom-rules setup-config /home/runner/work/detection-rules/detection-rules/custom_rules --overwrite
       env:
         DR_CLOUD_ID: ${{ secrets.ELASTIC_CLOUD_ID }}
         DR_KIBANA_USER: ${{ secrets.ELASTIC_USERNAME }}
