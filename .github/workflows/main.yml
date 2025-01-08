@@ -54,7 +54,7 @@ jobs:
       env:
         DR_CLOUD_ID: ${{ secrets.ELASTIC_CLOUD_ID }}
         DR_KIBANA_USER: ${{ secrets.ELASTIC_USERNAME }}
-        DR_KIBANA_PASSWORD: ${{ secrets.ELASTIC_PASSWORD }
+        DR_KIBANA_PASSWORD: ${{ secrets.ELASTIC_PASSWORD }}
         CUSTOM_RULES_DIR: ${{ secrets.CUSTOM_RULES_DIR }}
 
     - name: Update Version Lock
