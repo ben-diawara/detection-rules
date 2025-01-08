@@ -29,7 +29,10 @@ jobs:
 
     - name: Install Dependencies
       run: |
-        make
+        python -m pip install --upgrade pip
+        pip cache purge
+        pip install .[dev]
+        pip install lib/kql lib/kibana
 
     - name: Setup custom rules directry and configuration files 
       run: |
