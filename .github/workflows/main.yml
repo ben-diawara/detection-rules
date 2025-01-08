@@ -1,4 +1,4 @@
-name: Manually Sync Rules from Elastic Security to GitHub
+ltname: Manually Sync Rules from Elastic Security to GitHub
 
 on:
   workflow_dispatch:
@@ -10,7 +10,7 @@ on:
       space:
         description: 'Specify the Kibana space to export rules from'
         required: false
-        default: 'dev'
+        default: 'default'
 
 jobs:
   manual-dispatch-sync:
