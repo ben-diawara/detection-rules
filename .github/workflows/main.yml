@@ -41,12 +41,12 @@ jobs:
 
     - name: Setup custom rules directry and configuration files 
       run: |
-        mkdir /home/runner/work/detection-rules/detection-rules/custom_rules
-        python -m detection_rules custom-rules setup-config /home/runner/work/detection-rules/detection-rules/custom_rules
+        python -m detection_rules custom-rules setup-config ${{ env.CUSTOM_RULES_DIR }}
       env:
         DR_CLOUD_ID: ${{ secrets.ELASTIC_CLOUD_ID }}
         DR_KIBANA_USER: ${{ secrets.ELASTIC_USERNAME }}
         DR_KIBANA_PASSWORD: ${{ secrets.ELASTIC_PASSWORD }}
+        CUSTOM_RULES_DIR: ${{ secrets.CUSTOM_RULES_DIR }}
 
     - name: Export Rules from Elastic Security and Import Rules to TOML
       run: |
@@ -54,7 +54,8 @@ jobs:
       env:
         DR_CLOUD_ID: ${{ secrets.ELASTIC_CLOUD_ID }}
         DR_KIBANA_USER: ${{ secrets.ELASTIC_USERNAME }}
-        DR_KIBANA_PASSWORD: ${{ secrets.ELASTIC_PASSWORD }}
+        DR_KIBANA_PASSWORD: ${{ secrets.ELASTIC_PASSWORD }
+        CUSTOM_RULES_DIR: ${{ secrets.CUSTOM_RULES_DIR }}
 
     - name: Update Version Lock
       run: |
