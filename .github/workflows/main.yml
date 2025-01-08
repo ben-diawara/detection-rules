@@ -15,8 +15,7 @@ on:
 jobs:
   manual-dispatch-sync:
     runs-on: ubuntu-latest
-    env:
-      CUSTOM_RULES_DIR: ${{ secrets.CUSTOM_RULES_DIR }}
+  
 
     steps:
     - name: Checkout Repository
