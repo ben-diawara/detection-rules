@@ -25,7 +25,7 @@ jobs:
     - name: Set up Python 3.12
       uses: actions/setup-python@v2
       with:
-        python-version: '3.12'
+        python-version: '3.12.0'
 
     - name: Install Dependencies
       run: |
@@ -34,9 +34,9 @@ jobs:
         pip install .[dev]
         pip install lib/kql lib/kibana
 
-    - name: Setup custom dir for DAC Tool
+    - name: Setup custom rules directry and configuration files 
       run: |
-        python -m detection_rules -h
+        python -m detection_rules custom-rules setup-config ${{ env.CUSTOM_RULES_DIR }}
       env:
         DR_CLOUD_ID: ${{ secrets.ELASTIC_CLOUD_ID }}
         DR_KIBANA_USER: ${{ secrets.ELASTIC_USERNAME }}
