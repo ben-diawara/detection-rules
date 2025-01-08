@@ -1,5 +1,4 @@
 # Example GitHub Action Workflow
-on:
 name: Push Latest Rules to Elastic Security Space
 
 on:
@@ -25,7 +24,7 @@ on:
       space:
         description: 'Kibana space to use (dev or prod)'
         required: false
-        default: 'prod'
+        default: 'dev'
 
 jobs:
   sync-to-production:
