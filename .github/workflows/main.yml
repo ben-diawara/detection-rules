@@ -1,4 +1,4 @@
-ltname: Manually Sync Rules from Elastic Security to GitHub
+name: Manually Sync Rules from Elastic Security to GitHub
 
 on:
   workflow_dispatch:
