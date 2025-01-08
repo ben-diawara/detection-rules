@@ -32,7 +32,7 @@ jobs:
         python3.12 -m pip install --upgrade pip
         pip3.12 cache purge
         pip3.12 install .[dev]
-        pip3.12 install lib/kql lib/kibana
+        pip install lib/kql lib/kibana
 
 
     - name: Test Dac execution 
