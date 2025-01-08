@@ -83,4 +83,4 @@ jobs:
         commit_user_name: "GitHub Action"
         commit_user_email: "action@github.com"
       env:
-        GITHUB_TOKEN: ${{ secrets.WRITE_GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
