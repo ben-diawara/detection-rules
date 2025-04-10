@@ -1,4 +1,4 @@
-name: DAC - SIEM CI/CD Workflow
+name: Log Generator
 
 on:
 
