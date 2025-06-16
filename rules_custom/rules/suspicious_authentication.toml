@@ -14,7 +14,7 @@ index = [
     "logs-*"]
 language = "kuery"
 license = "Elastic License v2"
-name = "Suspicious Authentication Detected"
+name = "Suspicious Authentications Detected"
 note = """## TBD.
 """
 references = [
