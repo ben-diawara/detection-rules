@@ -1,0 +1,6 @@
+{
+  "filebeat-*": {
+    "client.as.organization.name.text": "keyword",
+    "file.fake": "keyword"
+  }
+}
