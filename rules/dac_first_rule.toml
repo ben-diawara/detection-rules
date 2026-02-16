@@ -1,0 +1,38 @@
+[metadata]
+creation_date = "2025/01/08"
+integration = []
+maturity = "production"
+updated_date = "2025/01/08"
+
+[rule]
+actions = []
+author = ["elastic"]
+description = "test custom dac"
+enabled = false
+exceptions_list = []
+false_positives = []
+from = "now-6m"
+interval = "5m"
+language = "eql"
+max_signals = 100
+name = "dac first rule"
+references = []
+related_integrations = []
+required_fields = []
+revision = 0
+risk_score = 50
+risk_score_mapping = []
+rule_id = "41dd79c9-8d88-4462-84d6-432ea6705029"
+setup = ""
+severity = "high"
+severity_mapping = []
+tags = []
+threat = []
+to = "now"
+type = "eql"
+version = 1
+
+query = '''
+process where true
+'''
+

@@ -8,7 +8,7 @@ author = ["Ben D"]
 description = """
 Identifies Suspicious Authenticationsss
 """
-false_positives = ["Legitimate exchange system administrations activity."]
+false_positives = ["Legitimate exchange system administrations activities."]
 from = "now-9m"
 index = [
     "logs-*"]
