@@ -1,0 +1,6 @@
+---
+8.18.0:
+  b530b15e-883e-4f76-acfd-8f3885ba2a77: /Users/bendiawara/Documents/labs/detection-rules/custom_rules/etc/schemas/auto_gen.json
+  beats: 8.16.1
+  ecs: 8.16.0
+  endgame: 8.4.0
